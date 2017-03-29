@@ -14,6 +14,7 @@ class Bands extends Component {
         </ul>
       </div>
     );
+    
   }
 };
 
