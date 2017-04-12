@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import {App} from './App';
 import createStore from './createStore'
 import manageBand from './reducers/manageBand'
 
@@ -18,4 +18,3 @@ const render = () => {
 export const renderer = { render };
 
 store.dispatch({ type: '@@init' });
-
