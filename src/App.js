@@ -7,10 +7,10 @@ class App extends Component {
     return (
       <div className="App">
         <BandInput store={this.props.store} />
-        <Bands store={this.props.store}/>
+        <Bands store={this.props.store} />
       </div>
     );
   }
-};
+}
 
 export default App;

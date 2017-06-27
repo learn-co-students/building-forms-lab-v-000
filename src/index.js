@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import createStore from './createStore'
-import manageBand from './reducers/manageBand'
+import createStore from './createStore';
+import manageBand from './reducers/manageBand';
 
-const store = createStore(manageBand)
+const store = createStore(manageBand);
 
 const render = () => {
   ReactDOM.render(
