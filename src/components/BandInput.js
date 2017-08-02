@@ -27,7 +27,6 @@ class BandInput extends Component {
   }
 
   render() {
-    debugger;
     return (
       <div>
         <form onSubmit={(event) => this.handleSubmit(event)}>
