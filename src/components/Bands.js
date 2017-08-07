@@ -4,7 +4,9 @@ class Bands extends Component {
   render(){
     return (
       <div>
-        band input
+        {this.props.store.getState().bands.map((band, i) => {
+          return <li key={i}>{band}</li>
+        })}
       </div>
     );
   }
