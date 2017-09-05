@@ -11,15 +11,15 @@ export default function createStore(reducer){
       console.log(`the state is`);
       console.log(state);
     }
-    renderer.render()
-  };
+    renderer.render();
+  }
 
   function getState(){
     return state;
-  };
+  }
 
   return {
     dispatch, 
     getState
   };
-};
+}
