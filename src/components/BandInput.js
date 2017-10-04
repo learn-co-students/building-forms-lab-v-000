@@ -30,7 +30,7 @@ class BandInput extends Component {
       <div>
         <form onSubmit={(event) => this.handleSubmit(event)}>
           <p>
-            <label>add band</label>
+            <label>add band</label><br></br>
             <input type="text" value={this.state.text} onChange={(event) => this.handleChange(event)} />
           </p>
           <input type="submit" />
