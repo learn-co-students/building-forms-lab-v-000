@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
 class BandInput extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
       text: '',
     };
   }
+
 
   handleChange(event) {
     this.setState({
@@ -18,19 +20,29 @@ class BandInput extends Component {
     event.preventDefault();
     this.props.store.dispatch({
       type: 'ADD_BAND',
-      band: this.state
+      band: this.state.text
+    });
+    {debugger}
+
+    this.setState({
+      text: '',
     });
   }
 
   render() {
     return (
       <div>
-        <p>
-          <label>Enter band name here: </label>
-          <input type="text" onChange={(event) => this.handleChange(event)} />
-        </p>
-        <input type="submit" onSubmit={(event) => this.handleSubmit(event)} />
-        {this.state.text}
+        <form onSubmit={(event) => this.handleSubmit(event)} >
+          <p>
+            <label>Enter band name here: </label>
+            <input 
+              type="text" 
+              value={this.state.text}
+              onChange={(event) => this.handleChange(event)} />
+          </p>
+          <input type="submit" />
+          {this.state.text}
+        </form>
       </div>
     );
   }
