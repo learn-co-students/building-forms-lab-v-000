@@ -61,7 +61,7 @@ describe('Bands Component', () => {
     expect(wrapper.find(Bands)).to.have.length(1);
   });
 
-  it('renders a list element for each of the bands', () => {
+  it('renders a ul element for each of the bands', () => {
       const store = createStore(manageBand)
       sinon.stub(store, 'getState').returns({bands: ['hello', 'goodbye', 'ciao']});
       const wrapper = shallow(<Bands store={store}/>)
