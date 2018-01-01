@@ -1,6 +1,6 @@
 import { renderer } from './index.js';
 
-export default function createStore(reducer){
+export default function createStore(reducer) {
   let state;
 
   function dispatch(action) {
@@ -11,15 +11,15 @@ export default function createStore(reducer){
       console.log(`the state is`);
       console.log(state);
     }
-    renderer.render()
+    renderer.render();
   };
 
-  function getState(){
+  function getState() {
     return state;
   };
 
   return {
-    dispatch, 
+    dispatch,
     getState
   };
 };
