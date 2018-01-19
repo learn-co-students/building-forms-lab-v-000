@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-01-19T06:49:52.980Z",
+    "end": "2018-01-19T06:49:53.128Z",
+    "duration": 148
+  },
+  "tests": [
+    {
+      "title": "has an text input field",
+      "fullTitle": "BandInput component has an text input field",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an initial state with text key set to empty string",
+      "fullTitle": "BandInput component has an initial state with text key set to empty string",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has changes the state on a keydown",
+      "fullTitle": "BandInput component has changes the state on a keydown",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "dispatches an action on submitting the form",
+      "fullTitle": "Redux dispatches an action on submitting the form",
+      "duration": 20,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "updates the state of the store after submitting the form",
+      "fullTitle": "Redux updates the state of the store after submitting the form",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "is a child of the app component",
+      "fullTitle": "Bands Component is a child of the app component",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "renders a list element for each of the bands",
+      "fullTitle": "Bands Component renders a list element for each of the bands",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "renders each li with the correct name",
+      "fullTitle": "Bands Component renders each li with the correct name",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "has an text input field",
+      "fullTitle": "BandInput component has an text input field",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an initial state with text key set to empty string",
+      "fullTitle": "BandInput component has an initial state with text key set to empty string",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has changes the state on a keydown",
+      "fullTitle": "BandInput component has changes the state on a keydown",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "dispatches an action on submitting the form",
+      "fullTitle": "Redux dispatches an action on submitting the form",
+      "duration": 20,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "updates the state of the store after submitting the form",
+      "fullTitle": "Redux updates the state of the store after submitting the form",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "is a child of the app component",
+      "fullTitle": "Bands Component is a child of the app component",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "renders a list element for each of the bands",
+      "fullTitle": "Bands Component renders a list element for each of the bands",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "renders each li with the correct name",
+      "fullTitle": "Bands Component renders each li with the correct name",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
