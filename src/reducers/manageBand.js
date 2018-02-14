@@ -3,8 +3,19 @@ export default function manageBand(state = {
 }, action) {
   switch (action.type) {
     case 'ADD_BAND':
-      return Object.assign({}, state, { bands: state.bands.concat(action.band) });
+      return { bands: state.bands.concat(action.band) }
     default:
       return state;
   }
 };
+
+// export default function manageTodo(state = {
+//   todos: [],
+// }, action) {
+//   switch (action.type) {
+//     case 'ADD_TODO':
+//       return { todos: state.todos.concat(action.todo) }
+//     default:
+//       return state;
+//   }
+// }
