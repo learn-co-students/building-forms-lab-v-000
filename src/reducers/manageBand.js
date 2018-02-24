@@ -8,3 +8,5 @@ export default function manageBand(state = {
       return state;
   }
 };
+
+//store state is [bands: ["string", "string"]]
