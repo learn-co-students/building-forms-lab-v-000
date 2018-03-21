@@ -21,6 +21,10 @@ class BandInput extends Component {
       type: 'ADD_BAND',
       band: this.state.text
     })
+    // This resets the input to blank on submit
+    this.setState({
+      text:''
+    })
   }
   
   render() {
