@@ -4,7 +4,10 @@ class BandInput extends Component {
   render() {
     return (
       <div>
-        bands component
+        <form>
+          <input type="text">
+          </input>
+        </form>
       </div>
     );
   }
