@@ -9,11 +9,17 @@ class BandInput extends Component {
     };
   }
 
+  handleChange(event) {
+    this.setState({
+      text: event.target.value
+    });
+  }
+
   render() {
     return (
       <div>
         <form>
-          <input type="text">
+          <input type="text" onChange={(event) => this.handleChange(event)} >
           </input>
         </form>
       </div>
