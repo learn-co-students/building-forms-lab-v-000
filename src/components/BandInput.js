@@ -32,6 +32,7 @@ class BandInput extends Component {
             <label>add todo</label>
             <input
               type="text"
+              value={this.state.text}
               onChange={(event) => this.handleChange(event)} />
           </p>
           <input type="submit" />
