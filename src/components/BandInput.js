@@ -15,12 +15,26 @@ class BandInput extends Component {
     });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.store.dispatch({
+      type: 'ADD_BAND',
+      band: this.state,
+    });
+  }
+
   render() {
     return (
       <div>
-        <form>
-          <input type="text" onChange={(event) => this.handleChange(event)} >
-          </input>
+        <form onSubmit={(event) =>
+          this.handleSubmit(event)}>
+          <p>
+            <label>add todo</label>
+            <input
+              type="text"
+              onChange={(event) => this.handleChange(event)} />
+          </p>
+          <input type="submit" />
         </form>
       </div>
     );
