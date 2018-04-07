@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+// import Band from './Band';
 
 class Bands extends Component {
-  render(){
+  render() {
+    // const bandLIs = this.props.store.getState().bands.map((band, index) => <Band text={band} key={index}/> );
+    const bandLIs = this.props.store.getState().bands.map((bandName, index) => <li key={index}>{bandName}</li> );
+
     return (
-      <div>
-        band input
-      </div>
+      <ul>
+        {bandLIs}
+      </ul>
     );
   }
 };
