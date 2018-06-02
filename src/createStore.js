@@ -1,4 +1,5 @@
 import { renderer } from './index.js';
+// import { render } from './index.js';
 
 export default function createStore(reducer){
   let state;
@@ -12,6 +13,7 @@ export default function createStore(reducer){
       console.log(state);
     }
     renderer.render()
+    // render()
   };
 
   function getState(){

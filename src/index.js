@@ -16,6 +16,7 @@ const render = () => {
 // not directly exporting the render function
 // because need to stub it out in tests.
 export const renderer = { render };
+// export { render };
 
 store.dispatch({ type: '@@init' });
 
