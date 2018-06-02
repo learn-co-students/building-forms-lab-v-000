@@ -18,4 +18,3 @@ const render = () => {
 export const renderer = { render };
 
 store.dispatch({ type: '@@init' });
-
