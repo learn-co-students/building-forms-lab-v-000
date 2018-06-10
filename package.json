@@ -7,7 +7,6 @@
     "mocha": "^3.2.0",
     "react-addons-test-utils": "^15.4.2",
     "react-scripts": "0.8.5",
-    "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
