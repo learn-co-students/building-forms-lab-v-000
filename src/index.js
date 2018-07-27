@@ -19,3 +19,4 @@ export const renderer = { render };
 
 store.dispatch({ type: '@@init' });
 
+// test comment
