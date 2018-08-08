@@ -12,3 +12,5 @@ const Bands = props => {
   );
 
 };
+
+export default Bands 
