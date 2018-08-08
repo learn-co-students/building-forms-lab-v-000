@@ -5,7 +5,9 @@ const Band = props => {
       return <li key={index}>{band.name}</li>
     });
   return (
-    <ul>{bands}</ul>
+    <ul>{
+      bands}
+    </ul>
   )
 }
 
