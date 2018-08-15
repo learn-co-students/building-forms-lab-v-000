@@ -1,5 +1,10 @@
-export default function manageBand(state = {
-  bands: [],
+export default function manageBands(state= {
+    bands: []
 }, action) {
-  return state
-};
+    switch (action.type) {
+        case "ADD_BAND":
+            return Object.assign({}, state, {bands: state.bands.concat(action.band)})
+        default:
+            return state
+    }
+}
