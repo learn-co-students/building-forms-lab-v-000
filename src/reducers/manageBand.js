@@ -1,8 +1,11 @@
 export default function manageBand(state = {
   bands: [],
 }, action) {
-  console.log("Reducer called")
-  console.log(action)
-  
-  return state
+  switch(action.type){
+    case "ADD_BAND":
+      return {...state, bands: state.bands.concat(action.band_data)}
+
+    default:
+      return state
+  }
 };
