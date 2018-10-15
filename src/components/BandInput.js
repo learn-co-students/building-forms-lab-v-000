@@ -26,7 +26,7 @@ class BandInput extends Component {
 
   render() {
     return(
-      <div>
+      <div id="BandInput">
         <form onSubmit={this.handleSubmit}>
           <p>
             <label>Band Name:</label>
