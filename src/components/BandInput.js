@@ -1,15 +1,24 @@
 // Add BandInput component
 import React, { Component } from 'react'
 
+
 class BandInput extends Component {
 
   state = {
     name: ''
   };
 
-  handleChange = (event) => this.setState( {band: event.target.value} );
-
-  handleSubmit = () => this.props.dispatch({ type: 'ADD_BAND', band: this.state });
+  handleChange = (event) => this.setState( {name: event.target.value}) ; 
+ 
+  handleSubmit = (event) => {
+    // console.log("Handle Submit",this.state)
+    // console.log("and props",this.props)    
+    event.preventDefault();
+    this.props.addBand(this.state);
+    this.setState({
+      name: '',
+    });    
+  }
   
   render() {
     return(
@@ -26,4 +35,5 @@ class BandInput extends Component {
   }
 }
 
-export default BandInput
+export default BandInput;
+
