@@ -16,7 +16,7 @@ class BandInput extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.dispatch({type: 'ADD_BAND', payload: this.state})
+    this.props.addBand(this.state)
   }
 
   render() {
@@ -32,4 +32,4 @@ class BandInput extends Component {
   }
 }
 
-export default connect()(BandInput);
+export default BandInput;
