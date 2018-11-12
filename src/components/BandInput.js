@@ -43,10 +43,5 @@ class BandInput extends Component {
   }
 }
 
-	const mapDispatchToProps = dispatch => {
-	  return {
-	    addBand: band => dispatch({ type: "ADD_BAND", band: band })
-	  }
-  }
 
-export default connect(null, mapDispatchToProps)(BandInput)
+export default BandInput;
