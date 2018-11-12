@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Band = () => {
+const Band = (props) => {
     return(
-        <li key={this.props.key}>{this.props.bandlname}</li>
+        <li>{props.band.name}</li>
     );
 }
 

@@ -4,9 +4,9 @@ import Band from '../components/Band'
 import BandInput from '../components/BandInput'
 
 class BandsContainer extends Component {
-  renderBands = () => {
-    this.props.bands.map((name, index) => <Band key={index} band={name} />)
-  };
+  // renderBands = () => {
+  //   this.props.bands.map((name, index) => <Band key={index} band={name} />)
+  // };
 
   render() {
     console.log({props: this.props})
@@ -16,7 +16,7 @@ class BandsContainer extends Component {
         
         <BandInput addBand={this.props.addBand} />
         <ul>
-          {this.renderBands()}
+          {this.props.bands.map((band) => <Band band={band} />)}
         </ul>
       </div>
     )
