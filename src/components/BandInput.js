@@ -4,8 +4,8 @@ import {connect} from 'react-redux'
 
 class BandInput extends Component {
   
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       text: ''
