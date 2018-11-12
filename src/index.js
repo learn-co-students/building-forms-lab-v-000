@@ -4,16 +4,14 @@ import App from './App';
 import createStore from './createStore'
 import manageBand from './reducers/manageBand'
 import { Provider } from 'react-redux';
+//import {createStore} from 'redux'
 
 const store = createStore(manageBand)
 
 const render = () => {
   ReactDOM.render(
-    <Provider store={store}>
-      <App />,      
-    </Provider>,
-     document.getElementById('root')
-    
+    <App store={store}/>,      
+    document.getElementById('root')    
   );
 };
 

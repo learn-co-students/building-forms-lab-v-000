@@ -5,9 +5,9 @@ import BandsContainer from './components/BandsContainer';
 class App extends Component {
   render() {
     return (
-      <div className="App">           
-        <BandsContainer />
-        <Bands />    
+        <div className="App">           
+        <BandsContainer store={this.props.store}/>
+        <Bands store={this.props.store}/>    
       </div>
     );
   }
