@@ -6,7 +6,7 @@ class BandsContainer extends React.Component{
     render(){
         return(
             <div>
-            <BandInput/>    
+            <BandInput store={this.props.store} />    
             </div>
         )
     }
