@@ -71,7 +71,7 @@ describe('Redux', () => {
     input.simulate('change', { target: { value: 'Hello' } })
     form.simulate('submit',  { preventDefault() {} })
 
-    expect(store.getState().bands[0].name).to.equal("Hello")
+    expect(store.getState().bands[0]).to.equal("Hello")
 
   });
 
@@ -109,7 +109,7 @@ describe('Bands Container', () => {
 
   it('renders each li with the correct name', () => {
       const store = createStore(manageBand)
-      sinon.stub(store, 'getState').returns({bands: [{ name: 'The Black Keys' }, { name: 'The White Stripes' }, { name: 'Black Moth Super Rainbow' }]});
+      sinon.stub(store, 'getState').returns({bands: ['The Black Keys', 'The White Stripes', 'Black Moth Super Rainbow']});
       const wrapper = mount(<Provider store={store}><App /></Provider>)
       expect(wrapper.text()).to.contain('The Black Keys');
       expect(wrapper.text()).to.contain('The White Stripes');
