@@ -10,7 +10,7 @@ class BandInput extends Component {
     };
   }
 
-  handleSubmit = event => {
+  handleSubmit(event){
     event.preventDefault();
     this.props.addBand(this.state);
     this.setState({
@@ -27,7 +27,7 @@ class BandInput extends Component {
   render() {
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={(event) => this.handleSubmit(event)}>
           <label>add band</label>
           <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.name}/>
           <input type="submit" />
@@ -37,8 +37,5 @@ class BandInput extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  addBand: formData => dispatch({ type: 'ADD_BAND', payload: formData })
-})
 
-export default connect(null, mapDispatchToProps)(BandInput);
+export default BandInput;
