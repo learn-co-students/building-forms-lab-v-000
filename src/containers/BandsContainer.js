@@ -6,31 +6,33 @@ class BandsContainer extends Component {
   
   render() {
 
-  const bands = () => this.props.bands.map((band, id) => {
-  	return <li key={id}> {band.name}</li>
+  const bandList = this.props.bands.map((band, id) => {
+    console.log(band)
+  	return <li>{band.name}</li>
   })
-
 
     return(
       <div>
       	<BandInput addBand={this.props.addBand} />
-        {bands}
+        <ul>
+          {bandList}
+        </ul>
       </div>
     )
   }
 }
 
-
-const mapDispatchToProps = dispatch => {
-  return {
-    addBand: formData => dispatch({ type: 'ADD_BAND', payload: formData })
-  }
-}
+const mapDispatchToProps = dispatch => ({
+    addBand: name => dispatch({ 
+      type: 'ADD_BAND', 
+      payload: { name }
+    })
+})
 
 const mapStateToProps = state => {
-  return {
-    bands: state.bands
-  }
+  return ({
+      bands: state.bands
+    })
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BandsContainer);
