@@ -11,22 +11,25 @@ import manageBand from '../src/reducers/manageBand'
 import App from '../src/App'
 import Adapter from 'enzyme-adapter-react-16'
 
+
+const store = createStore(manageBand)
+
 configure({ adapter: new Adapter() })
 
 describe('BandInput component', () => {
-  it('has an text input field', () => {
-    const wrapper = shallow(<BandInput />)
+  it('has an text input field', () => {    
+    const wrapper = shallow(<BandInput store={store} />).dive()
     expect(wrapper.find('input').first().type()).to.equal('input');
   });
 
   it('has an initial state with text key set to empty string', () => {
-    const wrapper = shallow(<BandInput />)
+    const wrapper = shallow(<BandInput store={store} />).dive()
     expect(wrapper.state(), "BandInput state was not found").to.exist
     expect(wrapper.state('name')).to.equal('')
   });
 
   it('changes the local state on input change', () => {
-    const wrapper = shallow(<BandInput />)
+    const wrapper = shallow(<BandInput store={store} />).dive()
     expect(wrapper.state('name'), "BandInput should mount with this.state.text equal to ''").to.equal('')
     let input = wrapper.find('input').first()
     input.simulate('change', { target: { value: 'Hello' } })
@@ -70,8 +73,7 @@ describe('Redux', () => {
 
     input.simulate('change', { target: { value: 'Hello' } })
     form.simulate('submit',  { preventDefault() {} })
-
-    expect(store.getState().bands[0].name).to.equal("Hello")
+    expect(store.getState().bands[0]).to.equal("Hello")
 
   });
 

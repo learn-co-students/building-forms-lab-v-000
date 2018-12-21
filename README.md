@@ -6,7 +6,7 @@
 2. Display a list of the new elements in a separate component.
 
 ## Overview
-
+ 
 Guess what - the bands are back! What we want is an application that allows us
 to add band names, and then have those band names instantly rendered below. We
 need to be incorporating Redux by dispatching actions and updating the store
