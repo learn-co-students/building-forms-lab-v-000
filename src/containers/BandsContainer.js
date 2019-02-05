@@ -5,12 +5,15 @@ import Bands from '../components/Band'
 
 class BandsContainer extends Component {
 
+  renderBands= () => this.props.bands.map((band, key)=> <Bands key={key} band={band}/>)
+
+
   render() {
     return(
       <div>
         BandsContainer
         <BandInput addBand={this.props.addBand} />
-        <ul><Bands bands={this.props.bands}/></ul>
+        <ul>{this.renderBands()}</ul>
         {console.log(this.props.bands)}
       </div>
     )
