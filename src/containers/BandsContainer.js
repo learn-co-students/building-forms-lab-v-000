@@ -9,7 +9,7 @@ class BandsContainer extends Component {
         BandsContainer
         <BandInput bands={this.props.addBand}/>
         {this.props.bands.map((band, i) =>
-          <li>{band.name}</li>
+          <li>{band}</li>
         )}
       </div>
     )
