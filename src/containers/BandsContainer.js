@@ -6,18 +6,18 @@ class BandsContainer extends Component {
 
   renderBands = () => this.props.bands.map((band, id) => <li key={id} > {band.name} </li>)
 
-  handleSubmit(event) {
-    event.preventDefault()
-    this.props.addBand(this.state)
-    this.setState({
-      name:''
-    })
-  }
+  // handleSubmit(event) {
+  //   event.preventDefault()
+  //   this.props.addBand(this.state)
+  //   this.setState({
+  //     name:''
+  //   })
+  // }
 
   render() {
     return(
       <div>
-        <BandInput onSubmit={this.handleSubmit} />
+        <BandInput addBand={this.props.addBand} />
         {this.renderBands()}
       </div>
     )
