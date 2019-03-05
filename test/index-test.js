@@ -1,7 +1,9 @@
 import { expect } from 'chai';
 import React from 'react'
 import { configure, shallow, mount } from 'enzyme'
-import BandInput from '../src/components/BandInput'
+// Import BandInput component without connection to Redux Store, for
+// BandInput component unit testing.
+import { BandInput } from '../src/components/BandInput'
 import BandsContainer from '../src/containers/BandsContainer'
 import sinon from 'sinon'
 import { renderer } from '../src/index'
