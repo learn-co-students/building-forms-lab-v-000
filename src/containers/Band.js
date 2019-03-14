@@ -3,9 +3,11 @@ import React from "react"
 
 const Band = props => {
 	return (
+		props.name !== "" ?
 		<li>
 			{props.name}
 		</li>
+		: null
 	)
 }
 

@@ -5,12 +5,12 @@ import {connect} from "react-redux"
 class BandInput extends Component {
 
   state = {
-  	name: ""
+  	bandName: ""
   }	
 
   handleChange = event => {
   	this.setState({
-  		name: event.target.value
+  		bandName: event.target.value
   	})
   }
 
@@ -18,7 +18,7 @@ class BandInput extends Component {
   	event.preventDefault()
   	this.props.addBand(this.state)
   	this.setState({
-  		name: "" 
+  		bandName: "" 
   	})
   }
   // * ALTERNATIVE handleSubmit*
@@ -38,7 +38,7 @@ class BandInput extends Component {
         		<input
         			type="text"
         			onChange={this.handleChange}
-        			value={this.state.name} 
+        			value={this.state.bandName} 
         		/>
         	</p>
         	<input type="submit" /><br /><br />
