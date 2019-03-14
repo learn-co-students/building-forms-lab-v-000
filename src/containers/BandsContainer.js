@@ -1,26 +1,24 @@
-// Get bands from the store for display
-import React, { Component } from 'react'
-import {connect} from "react-redux"
-import Band from "./Band"
+// Create and get bands from the store for display
+import React, { Component } from "react"
+import BandInput from "../components/BandInput"
+import Bands from "../components/Bands"
+import { connect } from "react-redux"
 
 class BandsContainer extends Component {
-  // Map over the bands received from Redux and  pass the value of each band into a Band child component 
-  // Band in this case doesn't have any Redux related code, and is a regular, functional component.	
-  renderBands = () => this.props.bands.map((band, id) => <Band key={id} name={band} />)
-
   render() {
-    return(
+    return (
       <div>
-        {this.renderBands()}
+        <BandInput addBand={this.props.addBand}/>
+        <Bands bands={this.props.bands}/>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => {
-	return {
-		bands: state.bands
-	}
-}
-// the mapStateToProps function is the first argument passed to connect
-export default connect(mapStateToProps)(BandsContainer)
+const mapStateToProps = ({ bands }) => ({ bands })
+
+const mapDispatchToProps = dispatch => ({ addBand: band => dispatch({ type: "ADD_BAND", band }) })
+
+// the mapStateToProps and mapDispatchToProps function arguments 
+// are passed to connect in that order
+export default connect(mapStateToProps, mapDispatchToProps)(BandsContainer)

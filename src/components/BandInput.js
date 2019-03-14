@@ -1,63 +1,39 @@
 // Create the bands
-import React, { Component } from 'react'
-import {connect} from "react-redux"
+import React, { Component } from "react"
 
 class BandInput extends Component {
 
   state = {
-  	bandName: ""
-  }	
-
-  handleChange = event => {
-  	this.setState({
-  		bandName: event.target.value
-  	})
+    name: ""
   }
 
-  handleSubmit = event => {
-  	event.preventDefault()
-  	this.props.addBand(this.state)
-  	this.setState({
-  		bandName: "" 
-  	})
+  handleOnChange = event => {
+    this.setState({
+      name: event.target.value,
+    });
   }
-  // * ALTERNATIVE handleSubmit*
-  // * If not given any arguments, connect will return dispatch 
-  // * as a prop to the component we're wrapping with connect
-  // handleSubmit = event => {
-  //  event.preventDefault()
-  //  this.props.dispatch({type: "ADD_BAND", payload: this.state})
-  // }
+
+  handleOnSubmit = event => {
+    event.preventDefault()
+    this.props.addBand(this.state)
+    this.setState({
+      name: "",
+    })
+  }
 
   render() {
-    return(
+    return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-        	<p>
-        		<label>Add band name: </label>
-        		<input
-        			type="text"
-        			onChange={this.handleChange}
-        			value={this.state.bandName} 
-        		/>
-        	</p>
-        	<input type="submit" /><br /><br />
+        <form onSubmit={this.handleOnSubmit}>
+          <input
+            type="text"
+            value={this.state.name}
+            onChange={this.handleOnChange} />
+          <input type="submit" />
         </form>
       </div>
     )
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-	addBand: formData => dispatch({ type: "ADD_BAND", payload: formData })
-})
-// In this component, we're not currently concerned with writing a 
-// mapStateToProps function (the first argument passed to connect) 
-// so we can use null instead of mapStateToProps as the first argument
-export default connect(null, mapDispatchToProps)(BandInput)
-
-// * ALTERNATIVE connect*
-// * If not given any arguments, connect will return dispatch 
-// * as a prop to the component we're wrapping with connect
-
-// export default connect()(CreateTodo)
+export default BandInput
