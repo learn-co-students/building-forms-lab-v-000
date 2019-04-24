@@ -4,11 +4,6 @@ import Bands from '../components/Bands';
 import { connect } from 'react-redux';
 
 class BandsContainer extends Component {
-
-  state = {
-    bands: []
-  }
-
   render() {
     return(
       <div>
