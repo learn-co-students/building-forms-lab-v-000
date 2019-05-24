@@ -6,9 +6,12 @@ export default function manageBand(
 ) {
   switch (action.type) {
     case "ADD_BAND":
-      console.log({ bands: state.bands.concat(action.band.name) });
-      return { ...state, bands: state.bands.concat(action.band.name) };
+      console.log("reducer received this action:", action);
+
+      console.log({ bands: state.bands.concat(action.band.name) }, "yo");
+      return { ...state, bands: [...state.bands, action.band] };
+
+    default:
+      return state;
   }
-  console.log("reducer received this action:", action);
-  return state;
 }
