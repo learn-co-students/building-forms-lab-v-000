@@ -5,10 +5,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BandsContainer />
+        <BandsContainer  />
       </div>
     );
   }
 };
+
 
 export default App;
