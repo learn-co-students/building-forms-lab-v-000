@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BandInput from '../components/BandInput';
+
 import { connect } from 'react-redux'
 
 
@@ -15,8 +16,9 @@ class BandsContainer extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state)
   return {
-    //????
+    bands: state.bands
   }
 }
 
