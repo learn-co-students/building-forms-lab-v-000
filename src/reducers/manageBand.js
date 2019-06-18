@@ -4,7 +4,7 @@ export default function manageBand(state = {
       switch (action.type){
 
       case 'ADD_BAND':
-  
+    console.log("action in reducer", action.band.name)
         return { ...state, bands: [...state.bands, action.band]}
 
       default:

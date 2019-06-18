@@ -7,6 +7,7 @@
    });
    return (
      <div>
+     < br/> List of Bands
        {bands}
      </div>
    );
