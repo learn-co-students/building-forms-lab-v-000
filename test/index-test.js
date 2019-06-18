@@ -25,11 +25,11 @@ describe('BandInput component', () => {
     expect(wrapper.state('name')).to.equal('')
   });
 
-  it('changes the local state on input change', () => {
+  it('changes the local state on input change', async() => {
     const wrapper = shallow(<BandInput />)
     expect(wrapper.state('name'), "BandInput should mount with this.state.text equal to ''").to.equal('')
     let input = wrapper.find('input').first()
-    input.simulate('change', { target: { value: 'Hello' } })
+    await input.simulate('change', { target: { value: 'Hello' } })
     expect(wrapper.state('name'), "BandInput state did not contain the correct value").to.equal('Hello')
   })
 
