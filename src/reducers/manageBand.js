@@ -1,10 +1,10 @@
-export default function manageBand(state = {
-  bands: [],
-}, action) {
+export default function manageBand(state =
+   {bands: [],}, action) {
+     
       switch (action.type){
 
       case 'ADD_BAND':
-    console.log("action in reducer", action.band.name)
+    // console.log("action in reducer", action.band)
         return { ...state, bands: [...state.bands, action.band]}
 
       default:

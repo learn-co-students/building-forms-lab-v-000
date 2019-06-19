@@ -4,3 +4,11 @@ export const addBand = band => {
     band
   }
 }
+
+// can also use the this structure
+// export function addBand(band){
+//   return {
+//     type: "ADD_BAND",
+//     band
+//   }
+// }

@@ -1,16 +1,28 @@
+import React from 'react';
 
- import React from 'react';
-
- const Bands = props => {
-   const bands = props.bands.map((band, index) => {
+ const Bands = ({bands}) => {
+   const bandcard = bands.map((band, index) => {
      return <li key={index}>{band.name}</li>;
    });
    return (
      <div>
      < br/> List of Bands
-       {bands}
+       {bandcard}
      </div>
    );
  };
 
- export default Bands;
+export default Bands;
+
+// equivalent to above
+ // const Bands = props => {
+ //   const bands = props.bands.map((band, index) => {
+ //     return <li key={index}>{band.name}</li>;
+ //   });
+ //   return (
+ //     <div>
+ //     < br/> List of Bands
+ //       {bands}
+ //     </div>
+ //   );
+ // };
