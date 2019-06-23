@@ -1,3 +1,4 @@
+//do Bands as functional component
 import React from 'react'
 
 const Bands = props => {                       //could also list {bands} instead of props
