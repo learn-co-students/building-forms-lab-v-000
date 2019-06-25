@@ -1,8 +1,7 @@
 import { connect } from 'react-redux'
-// import { addBand } from '../reducers/manageBand'
 import React, { Component } from 'react'
 
-class BandInput extends Component {
+export class BandInput extends Component {
   //
   constructor() {
     super();
@@ -12,6 +11,7 @@ class BandInput extends Component {
   }
 
   handleSubmit = event => {
+    debugger
     event.preventDefault();
     this.props.addBand(this.state)
   }
@@ -28,7 +28,7 @@ class BandInput extends Component {
         <form onSubmit={this.handleSubmit}>
           <p>
             <label>Add Band</label>
-            <input type="text" onChange={this.handleChange} value={this.state.name}/>
+            <input name="name" type="text" onChange={this.handleChange} value={this.state.name}/>
           </p>
           <input type="submit" />
         </form>
@@ -38,16 +38,17 @@ class BandInput extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    bands: state.bands
-  };
-};
 
 const mapDispatchToProps = dispatch => {
     return {
         addBand: formData => dispatch({ type: 'ADD_BAND', payload: formData })
     };
 };
+
+const mapStateToProps = state => {
+  return {
+    bands: state.bands
+  }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(BandInput)
