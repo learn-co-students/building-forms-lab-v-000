@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import React from 'react'
 import { configure, shallow, mount } from 'enzyme'
-import BandInput from '../src/components/BandInput'
+import { BandInput } from '../src/components/BandInput'
 import BandsContainer from '../src/containers/BandsContainer'
 import sinon from 'sinon'
 import { renderer } from '../src/index'
@@ -70,7 +70,6 @@ describe('Redux', () => {
 
     input.simulate('change', { target: { name: 'name', value: 'Hello' } })
     form.simulate('submit',  { preventDefault() {} })
-
     expect(store.getState().bands[0].name).to.equal("Hello")
 
   });
