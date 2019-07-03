@@ -9,7 +9,10 @@ const store = createStore(manageBand, window.__REDUX_DEVTOOLS_EXTENSION__ && win
 
 ReactDOM.render(
 	<Provider store={store}>
-		<App />
+		<div>
+			<h1> index</h1>
+			<App />
+		</div>
 	</Provider>,
 	document.getElementById('root')
 );

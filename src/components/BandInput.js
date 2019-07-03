@@ -1,6 +1,5 @@
 // Add BandInput component
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class BandInput extends Component {
 	state = {
@@ -9,6 +8,7 @@ class BandInput extends Component {
 
 	handleOnChange = (event) => {
 		// Handle Updating Component State
+
 		this.setState({
 			[event.target.name]: event.target.value
 		});
@@ -16,20 +16,20 @@ class BandInput extends Component {
 
 	handleOnSubmit = (e) => {
 		e.preventDefault();
+		this.props.addBand(this.state);
 		this.setState({
 			name: ''
 		});
 	};
+
 	render() {
 		return (
 			<form onSubmit={this.handleOnSubmit}>
-				<label htmlFor="band-input"> Band Input</label>
-
-				<input onChange={this.handleOnChange} name="band-input" type="text" />
+				<input onChange={this.handleOnChange} name="name" value={this.state.name} type="text" />
 				<button type="submit">Submit </button>
 			</form>
 		);
 	}
 }
 
-export default connect()(BandInput);
+export default BandInput;
