@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Band = props => {
-  return (
-    <li>{props.text}</li>
+  const band = props.bands.map((band, index) => {
+  return
+    <li key={index}>{band.name}</li>
   );
 };
 
