@@ -2,13 +2,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import BandsContainer from '../containers/BandsContainer'
+import Band from './Band'
 
 class BandInput extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: '',
-    };
+
+  state = {
+    name: ''
   }
 
   handleSubmit = event => {
@@ -31,7 +30,7 @@ class BandInput extends Component {
         Band Input
         <form onSubmit={this.handleSubmit}>
           <label>add band</label>
-          <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.text}/>
+          <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.name}/>
           <input type="submit" />
        </form>
       </div>
