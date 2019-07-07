@@ -5,9 +5,11 @@ import BandsContainer from '../containers/BandsContainer'
 import Band from './Band'
 
 class BandInput extends Component {
-
-  state = {
-    name: ''
+  constructor() {
+    super();
+    this.state = {
+      name: ''
+    }
   }
 
   handleSubmit = event => {
@@ -30,7 +32,7 @@ class BandInput extends Component {
         Band Input
         <form onSubmit={this.handleSubmit}>
           <label>add band</label>
-          <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.name}/>
+          <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.text}/>
           <input type="submit" />
        </form>
       </div>
@@ -38,8 +40,8 @@ class BandInput extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  addBand: formData => dispatch({ type: 'ADD_BAND', payload: formData })
-})
+
+
+const mapDispatchToProps = dispatch => ({ addBand: band => dispatch({ type: "ADD_BAND", band }) })
 
 export default connect(null, mapDispatchToProps)(BandInput);
