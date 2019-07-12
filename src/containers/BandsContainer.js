@@ -1,13 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import BandInput from '../components/BandInput';
+import { connect } from 'react-redux';
 
 class BandsContainer extends Component {
   render() {
     return(
       <div>
-        BandsContainer
+        <BandInput dispatch={this.props.dispatch}/>
+        {this.props.bands.map((band, id) => <li key={id}>{band.name}</li>)}
       </div>
     )
   }
 }
 
-export default BandsContainer
+const mapStateToProps = state => {
+  return {
+    bands: state.bands
+  }
+}
+export default connect(mapStateToProps)(BandsContainer)
