@@ -14,6 +14,7 @@
     "jsdom": "^9.9.1",
     "mocha": "^5.2.0",
     "react-scripts": "^1.1.4",
+    "redux-devtools-extension": "^2.13.8",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.0.0"
   },
