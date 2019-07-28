@@ -2,15 +2,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import BandsContainer from '../containers/BandsContainer'
-import Band from './Band'
+import Bands from './Bands'
 
 class BandInput extends Component {
-  constructor() {
-    super();
-    this.state = {
+    state = {
       name: ''
     }
-  }
 
   handleSubmit = event => {
     event.preventDefault();
@@ -40,8 +37,4 @@ class BandInput extends Component {
   }
 }
 
-
-
-const mapDispatchToProps = dispatch => ({ addBand: band => dispatch({ type: "ADD_BAND", band }) })
-
-export default connect(null, mapDispatchToProps)(BandInput);
+export default BandInput
