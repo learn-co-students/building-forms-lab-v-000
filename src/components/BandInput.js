@@ -15,8 +15,9 @@ class BandInput extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.dispatch({
-      type: 'ADD_BAND'
+    this.props.addBand(this.state);
+    this.setState({
+      name: ''
     });
   }
 
@@ -35,4 +36,4 @@ class BandInput extends Component {
   }
 }
 
-export default (BandInput);
+export default BandInput;
