@@ -1,4 +1,3 @@
-// Add BandInput component
 import React, { Component } from 'react';
 
 class BandInput extends Component {
@@ -24,12 +23,12 @@ class BandInput extends Component {
   render() {
     return(
       <div>
-        <form onSubmit={this.handleOnSubmit}>
+        <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <p>
             <label>Add a new band</label>
-            <input type = 'text' onChange={this.handleOnChange} value={this.state.name} />
+            <input type = 'text' onChange={(event) => this.handleOnChange(event)} value={this.state.name} />
           </p>
-          <input value='submit' />
+          <input type='submit' />
         </form>
       </div>
     )
