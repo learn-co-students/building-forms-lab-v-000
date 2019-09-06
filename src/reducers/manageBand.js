@@ -3,8 +3,8 @@ export default function manageBand(state = {
 }, action) {
   switch (action.type) {
     case 'ADD_BAND':
-      debugger
-      return [...state.bands, action.band]
+      // debugger
+      return state = { bands: [...state.bands, action.band] }
     default:
       return state
   }
