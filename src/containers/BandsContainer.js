@@ -13,13 +13,13 @@ class BandsContainer extends Component {
         BandsContainer
         <BandInput addBand={this.props.addBand} />
         <ul>
-          {this.props.bands.map(band => <Bands band={band} />)}
+          {this.props.bands.map((band, id) => <Bands key={id} band={band} />)}
         </ul>
       </div>
     )
   }
 }
-
+//* Id is not generated. It actually returns undefined, but doesn't throw an error in console.
 
 const mapStateToProps = state => {
   console.log('in MapStateoProps', state)
