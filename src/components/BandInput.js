@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import uuid from 'uuid'
 import { connect } from 'react-redux'
-//? do i need to do this? create a file for action? import { addBand} from ''
+import { addBand } from '../actions/bands'
 
 class BandInput extends Component {
 
@@ -17,7 +16,10 @@ class BandInput extends Component {
 
   handleOnSubmit = e => {
     e.preventDefault()
-
+    this.props.addBand(this.state)
+    this.setState({
+      name: ''
+    })
   }
 
   render() {
@@ -31,12 +33,14 @@ class BandInput extends Component {
             value={this.state.name}
             onChange={event => this.handleOnChange(event)}
           />
-          <button type="submit" >Add</button>
+          <input type="submit" />
         </form>
       </div>
     )
   }
 }
+
+export default connect(state => ({ name: state.name }), { addBand })(BandInput);
 
 
 // const mapDispatchToProps = dispatch => {
@@ -46,7 +50,4 @@ class BandInput extends Component {
 //     }
 //   };
 // };
-
-// export default connect(null, mapDispatchToProps)(BandInput)
-export default BandInput
-
+// export default connect(null, { addBand })(BandInput)
