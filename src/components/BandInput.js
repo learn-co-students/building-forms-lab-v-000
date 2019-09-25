@@ -15,7 +15,7 @@ class BandInput extends Component {
  
   handleSubmit = event => {
     event.preventDefault();
-    this.props.manageBand(this.state);
+    this.props.addBand(this.state);
   };
 
 
@@ -38,13 +38,15 @@ class BandInput extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addBand: formData => dispatch({ type: 'ADD_BAND', payload: formData })
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addBand: formData => dispatch({ type: 'ADD_BAND', payload: formData })
+//   };
+// };
  
-export default connect(
-  null,
-  mapDispatchToProps
-)(BandInput);
+// export default connect(
+//   null,
+//   mapDispatchToProps
+// )(BandInput);
+
+export default BandInput
