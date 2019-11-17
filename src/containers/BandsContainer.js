@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import BandInput from '../components/BandInput';
 import Bands from '../components/Bands';
 import { connect } from 'react-redux';
-//import QuoteCard from '../components/QuoteCard';
-//import { removeQuote, upvoteQuote, downvoteQuote } from '../actions/quotes';
 
 class BandsContainer extends Component {
   render() {
