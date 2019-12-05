@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+
 
 class BandsContainer extends Component {
   render() {
@@ -10,4 +12,13 @@ class BandsContainer extends Component {
   }
 }
 
-export default BandsContainer
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addBand: (newName) => {
+      dispatch(addBand(newName))
+    }
+  };
+};
+
+export default connect(null, mapDispatchToProps)(BandsContainer);
