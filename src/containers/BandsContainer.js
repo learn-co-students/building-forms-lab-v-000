@@ -10,6 +10,7 @@ class BandsContainer extends Component {
     return(
       <div>
         BandsContainer
+        <li></li>
         <BandInput addBand={manageBand}/>
       </div>
     )
@@ -25,7 +26,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     addBand: (newName) => {
-      dispatch(addBand(newName))
+      dispatch(manageBand(newName))
     }
   };
 };
