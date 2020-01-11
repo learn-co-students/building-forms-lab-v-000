@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 class BandsContainer extends Component {
   render() {
+  	
   	const { bands, addBand } = this.props;
     return(
       <div>
