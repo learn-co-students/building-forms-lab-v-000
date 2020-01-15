@@ -9,15 +9,20 @@ class BandsContainer extends Component {
   }
 
 
+
+
+
   render() {
+
+    const allBands = this.props.bands.map((band, index) => {
+      return <li key={index}>{band.name}</li>;
+    });
 
     return(
       <div>
         BandsContainer
         <BandInput addBand={this.addBand}/>
-        {
-         this.props.bands.map(band => `<li key={band.name}>{band.name}</li>`)
-        }
+        {allBands}
       </div>
     )
   }

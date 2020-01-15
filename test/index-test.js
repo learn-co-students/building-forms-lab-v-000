@@ -90,7 +90,6 @@ describe('Redux', () => {
 
   });
 
-
 })
 
 describe('Bands Container', () => {
@@ -126,8 +125,8 @@ describe('Bands Container', () => {
       const store = createStore(manageBand)
       sinon.stub(store, 'getState').returns({bands: [{ name: 'The Black Keys' }, { name: 'The White Stripes' }, { name: 'Black Moth Super Rainbow' }]});
       const wrapper = mount(<Provider store={store}><App /></Provider>)
-      // expect(wrapper.text()).to.contain('The Black Keys');
-      // expect(wrapper.text()).to.contain('The White Stripes');
-      // expect(wrapper.text()).to.contain('Black Moth Super Rainbow');
+      expect(wrapper.text()).to.contain('The Black Keys');
+      expect(wrapper.text()).to.contain('The White Stripes');
+      expect(wrapper.text()).to.contain('Black Moth Super Rainbow');
   });
 })
