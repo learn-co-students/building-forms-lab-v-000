@@ -85,7 +85,6 @@ describe('Redux', () => {
 
     input.simulate('change', { target: { value: 'Hello' } })
     form.simulate('submit',  { preventDefault() {} })
-
     expect(store.getState().bands[0].name).to.equal("Hello")
 
   });
