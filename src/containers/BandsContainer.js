@@ -8,8 +8,8 @@ class BandsContainer extends Component {
     // console.log(this.props)
     return(
       <div>
-        BandsContainer
       <BandInput addBand={this.props.addBand}/>
+      <h3>Bands</h3>
       {bands.map((band, index )=> <li>{band.name}</li>)}
       </div>
     )
