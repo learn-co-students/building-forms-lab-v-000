@@ -13,7 +13,9 @@ class BandsContainer extends Component {
     return(
       <div>
         <BandInput addBand={name => this.updateBand(name)} />
-
+        <ul>
+          {this.props.bands.map(band => <li>{band}</li>)}
+        </ul>
 
 
       </div>

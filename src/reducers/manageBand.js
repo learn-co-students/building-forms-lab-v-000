@@ -4,8 +4,10 @@ export default function manageBand(state = {
   switch (action.type) {
   case 'ADD_BAND':
     let newBandsState = [...state, action.band];
+    let newStateObject = {bands: newBandsState}
     state.bands = newBandsState;
-    return state
+    console.log(newStateObject)
+    return newStateObject
   default:
     return state
   }
