@@ -5,17 +5,17 @@ import { addNewBand } from '../actions/bands';
 
 class BandsContainer extends Component {
 
-  updateBand = name => {
-    this.props.addBand(name)
-  };
+  // updateBand = name => {
+  //   this.props.addBand(name)
+  // };
 
   render() {
     return(
       <div>
-        <BandInput addBand={name => this.updateBand(name)} />
-        <ul>
-          {this.props.bands.map(band => <li>{band}</li>)}
-        </ul>
+        <BandInput addBand={this.props.addBand} />
+        // <ul>
+        //   {this.props.bands.map(band => <li>{band}</li>)}
+        // </ul>
 
 
       </div>
@@ -24,7 +24,6 @@ class BandsContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-
   return {
     bands: state.bands
   };
