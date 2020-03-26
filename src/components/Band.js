@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const Band = props => {
+const Band = bands => (
+  <div>
+    <ul>
+      {bands.name.map(band => <li>{band.name}</li>)}
+    </ul>
+  </div>
+)
 
-  console.log(props)
-
-  return (
-    <div>
-      {}
-    </div>
-  )
-
-}
-
-export default Band
+export default Band;
