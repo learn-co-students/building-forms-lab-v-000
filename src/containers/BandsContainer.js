@@ -15,7 +15,7 @@ class BandsContainer extends Component {
 
   renderBands = () => {
     return this.props.bands.map((band, idx)=> {
-      return <Band key={idx} name={ band.name } /> 
+      return <Band key={idx} name={band.name} /> 
     })
   }
 }
@@ -26,7 +26,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addBand: (band) => dispatch({ type: 'ADD_BAND', band}) 
+    addBand: (band) => dispatch({ type: 'ADD_BAND', band }) 
   }
 }
 
