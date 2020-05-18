@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import BandInput from '../components/BandInput';
 
+
 class BandsContainer extends Component {
-  renderQuotes = () => this.props.quotes.map((quote, id) => <QuoteCard key={id} quote={quote} />)
 
   render() {
     return(
