@@ -1,6 +1,6 @@
 // Add BandInput component
 import React, { Component } from 'react'
-// import uuid from 'uuid';
+import uuid from 'uuid';
 
 class BandInput extends Component {
 
@@ -10,14 +10,14 @@ class BandInput extends Component {
 
   handleOnChange = event => {
     this.setState({
-      [event.target.name]: event.target.value
+      name: event.target.value
     });
   }
 
   handleOnSubmit = event => {
     event.preventDefault();
-    // const band = {name: this.state.name, id: uuid()};
-    this.props.addBand(this.state)
+    const band = {name: this.state.name, id: uuid()};
+    this.props.addBand(band)
     this.setState({
       name: ''
     });

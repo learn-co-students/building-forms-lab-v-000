@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 class BandsContainer extends Component {
   
-renderBands = () => this.props.bands.map((band, idx) => <li key={idx}>{band.name}</li>)
+renderBands = () => this.props.bands.map(band => <li key={band.id}>{band.name}</li>)
 addBand = (band) => this.props.dispatch({type: "ADD_BAND", band: band})
   
 render() {
