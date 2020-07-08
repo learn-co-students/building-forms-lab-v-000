@@ -8,10 +8,6 @@ class BandsContainer extends Component {
   
 
   render() {
-    // console.log("the props that <BandContainer /> receives:")
-    // console.log(this.props)
-    // console.log(this.props)
-    // console.log(this.props.addBand)
     
     return(
       <div>
@@ -23,9 +19,6 @@ class BandsContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  // console.log('the state that mapStateToProps gets from the Redux store:')
-  // console.log(state)
-  // console.log('---------')
   return {
     bands: state.bands
   }
