@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import BandsContainer from './containers/BandsContainer';
+// Create bands
+import React, { Component } from "react"
+import BandsContainer from "./containers/BandsContainer"
 
 class App extends Component {
   render() {
@@ -7,8 +8,8 @@ class App extends Component {
       <div className="App">
         <BandsContainer />
       </div>
-    );
+    )
   }
-};
+}
 
-export default App;
+export default App
