@@ -5,9 +5,8 @@ export default function manageBand(state = {
 	let band;
   switch (action.type) {
   	case 'ADD_BAND':
-  		return state.concat(action.band);
-  	case 'REMOVE_BAND':
-  	  return state.filter(band => band.id !== action.bandId);
+      return {...state, bands: [...state.bands, action.band]}
   	default:
   		return state;
+  };
 };
