@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import BandCard from '../components/BandCard';
 
 class BandsContainer extends Component {
 		render() {
@@ -15,7 +14,7 @@ class BandsContainer extends Component {
 		        <div className="container">
 		          <div className="row">
 		            <div className="col-md-4">
-		              {bands.map(band => <BandCard key={band.id} removeBand={removeBamd} band={band} />)}
+		              {bands.map(band => <li> key={band.id} removeBand={removeBamd} band={band.name} </li>)}
 		            </div>
 		          </div>
 		        </div>
