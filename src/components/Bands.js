@@ -1,15 +1,14 @@
 import React from 'react'
 
-const Bands = (props) => {
-    console.log(props)
+const Bands = ({ bands }) => {
     debugger
-    const bands = props.bands.map((band, index) => {
+    const allbands = bands.map((band, index) => {
       return <li key={index}>{band.name}</li>;
     });
   
     return (
       <div>
-        {bands}
+        {allbands}
       </div>
     );
   
