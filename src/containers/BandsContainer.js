@@ -1,17 +1,3 @@
-// import React, { Component } from 'react'
-//
-// class BandsContainer extends Component {
-//   render() {
-//     return(
-//       <div>
-//         BandsContainer
-//       </div>
-//     )
-//   }
-// }
-//
-// export default BandsContainer
-
 
 
 
@@ -20,6 +6,8 @@ import React, { Component } from 'react';
 // just putting one dot means go up one folder, into the folder that this
 // file is in. two dots would take you to src.
 import BandInput from '../components/BandInput.js';
+import Band from '../components/Band.js';
+
 
 import { connect } from 'react-redux';
 
@@ -42,13 +30,18 @@ class BandsContainer extends Component {
 
   // i took this out of the return below to tst something
   // <BandInput addBand={this.props.addBand} />
+  // {this.renderBands}
+
+
+    renderBands = () => this.props.bands.map((band, id) => <Band key={id} text={band} />)
 
 
   render() {
     console.log("this.props.addBand in BandsContainer.......", this.props.addBand)
     return(
       <div>
-        hi
+        <BandInput addBand={this.props.addBand} />
+        {this.renderBands()}
       </div>
     )
   }
@@ -65,13 +58,18 @@ const mapStateToProps = state => {
 
 
 
-const mapDispatchToProps = dispatch => {
-  console.log("mapDispatchToProps in BandsContainer................")
-  return {
-    addBand: formData => dispatch({type: 'ADD_BAND', formData})
-  }
-};
+// const mapDispatchToProps = dispatch => {
+//   console.log("mapDispatchToProps in BandsContainer................")
+//    {
+//     addBand: formData => dispatch({type: 'ADD_BAND', formData})
+//   }
+// };
 
+// more succint version
+
+const mapDispatchToProps = dispatch => ({
+  addBand: band => dispatch({type: 'ADD_BAND', band})
+});
 
 
 

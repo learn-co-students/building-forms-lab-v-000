@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-
+import Band from './Band.js'
 
 class BandInput extends Component {
 
@@ -29,7 +29,8 @@ class BandInput extends Component {
     event.preventDefault();
     // console.log("this.props.addBand(this.state.name)", this.props.addBand(this.state.name))
     this.props.addBand(this.state)
-    this.setState = ({
+
+    this.setState({
       name: ''
     })
   }
