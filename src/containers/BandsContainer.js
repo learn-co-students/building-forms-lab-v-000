@@ -27,8 +27,10 @@ class BandsContainer extends Component {
 // }
 
 const mapStateToProps = state => {
+  debugger
+
   return ({
-    bands: state.bands
+     bands: state.bands
   })
 }
 
