@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 
 import BandInput from '../components/BandInput'
-import Band from '../components/band'
+import Band from '../components/Band'
 
 class BandsContainer extends Component {
 
