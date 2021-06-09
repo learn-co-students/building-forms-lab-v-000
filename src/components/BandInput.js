@@ -6,7 +6,7 @@ class BandInput extends Component {
         name: ""
     }
 
-    handleOnChange=(event)=>this.setState({[event.target.name]:event.target.value})
+    handleOnChange=(event)=>this.setState({name: event.target.value})
     handleOnSubmit=(event)=>{
         event.preventDefault();
         this.props.addBand(this.state);
