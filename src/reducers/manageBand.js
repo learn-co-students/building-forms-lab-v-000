@@ -3,9 +3,9 @@ export default function manageBand(state = {
 }, action) {
     switch(action.type){
         case "ADD_BAND":
-            console.log(action);
+            // debugger;
            return {...state,
-                    bands: [...state.bands, ...action.payload]
+                    bands: state.bands.concat(action.band)
                     };
         default:  
             return state;
