@@ -3,24 +3,23 @@ import BandInput from '../components/BandInput'
 import {connect} from 'react-redux'
 
 class BandsContainer extends Component {
-    bandInputOnSubmit = ({name})=>{
-        this.props.addBand(name)
-    }
 
   render() {
     return(
       <div>
-        <BandInput addBand={this.bandInputOnSubmit} />
+        <BandInput addBand={band=>this.props.addBand(band)} />
+
       </div>
     )
   }
 }
 
-const mapDispatchToProps = (dispatch)=>({
-    addBand: (name)=>dispatch({type: "ADD_BAND", name})
-})
+
 const mapStateToProps = (state)=>({
     bands: state.bands
-})
+});
+const mapDispatchToProps = (dispatch)=>({
+    addBand: payload=>dispatch({type: "ADD_BAND", payload})
+});
 
 export default connect (mapStateToProps,mapDispatchToProps)(BandsContainer)
